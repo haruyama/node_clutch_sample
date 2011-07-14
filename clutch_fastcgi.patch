@@ -1,0 +1,11 @@
+--- node_modules/clutch/lib/clutch.js.orig	2011-07-14 22:49:20.000000000 +0900
++++ node_modules/clutch/lib/clutch.js	2011-07-14 22:52:08.000000000 +0900
+@@ -83,7 +83,7 @@
+ 
+     var _route = function (req, res) {
+         if (!router.apply(null, arguments)) {
+-            res.writeHead(404);
++            res.writeHead(404, {'Content-Type': 'text/plain'});
+             res.end();
+         }
+         return true;
