@@ -1,1 +1,10 @@
-nodejs sample application.
+nodejs sample application
+using clutch (https://github.com/clement/clutch/).
+
+* Original
+
+https://github.com/sowawa/node_sample
+
+* command for local testing
+
+/usr/bin/spawn-fcgi -M 666 -n -s /tmp/app.sock -f 'node public_html/server.fcgi'

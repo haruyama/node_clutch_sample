@@ -1,15 +1,8 @@
 var fcgiApp = require("./fcgi"),
-	http = require("http");
+    http = require("http"),
+    hello = require("./hello");
 
-
-var myServer = http.createServer(function(req, res) {
-	setTimeout(function() {
-		res.writeHead(200, {"Content-type": "text/html"});
-		res.end("It works!" + Date.now());
-		console.log("Wrote response.");
-	}, 1000);
-	//throw new Error("Bollocks.");
-});
+var myServer = http.createServer(hello.urls);
 
 // Instead of this:
 //myServer.listen(12345);
