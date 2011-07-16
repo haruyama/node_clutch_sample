@@ -1,6 +1,10 @@
 nodejs sample application
 using clutch (https://github.com/clement/clutch/).
 
+'GET /hello/(\\w+)$' => Hello, $1!
+'GET /hello$'        => Hello, World!
+otherwise            => 404 Not Found
+
 * Original
 
 https://github.com/sowawa/node_sample
